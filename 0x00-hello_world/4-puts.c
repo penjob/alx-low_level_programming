@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - main block
+ * main - main block "hello"
  * Return : always 0 (success)
  */
 int main(void)
