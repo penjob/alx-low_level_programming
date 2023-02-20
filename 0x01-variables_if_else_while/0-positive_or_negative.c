@@ -4,6 +4,8 @@
 
 /**
  *  main - Main entered print
+ *  Description: positive negative or zero
+ *  Return: always 0
  */
 int main(void)
 {
