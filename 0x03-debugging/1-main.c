@@ -13,11 +13,12 @@ int main(void)
 
         i = 0;
 
-        while (i < 10)
-        {
-                putchar(i); //this is the part causing infinite loop
-        }
-
+	/**
+        *while (i < 10)
+        *{
+        *       putchar(i); //this is the part causing infinite loop
+        *}
+	*/
         printf("Infinite loop avoided! \\o/\n");
 
         return (0);
