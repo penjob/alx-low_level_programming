@@ -8,14 +8,14 @@ void print_alphabet_x10(void)
 	int x = 97;
 	int y = 1;
 
-	while (x <= 122)
+	while (y <= 10)
 	{
-		while (y <= 10)
+		while (x <= 122)
 		{
 			_putchar(x);
 			x++;
-			y++;
 		}
 		_putchar('\n');
+		y++;
 	}
 }
