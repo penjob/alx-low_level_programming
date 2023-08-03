@@ -11,3 +11,4 @@ int pnumber(int x, int n);
 int is_palindrome(char *s);
 int _scan(char *c, char *d);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
