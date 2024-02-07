@@ -4,40 +4,29 @@
 #include "lists.h"
 
 /**
-* delete_nodeint_at_index - a function that deletes the node at
-*index index of a listint_t linked list.
-* @head: a pointer to a pointer point to head of list
-* @index: the index of the node that should be deleted
-* Return: 1 if it succeeded, -1 if it failed
+* reverse_listint - a function that reverses a list
+* @head: a pointer to pointer that point to head of list
+* Return: a pointer to the first node of the reversed list
 */
 
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *previous_ptr;
-	listint_t *next_ptr;
-	unsigned int i;
+	listint_t *cly_ptr;
 
-	if (head == NULL || *head == NULL)
-		return (-1);
+	if (*head == NULL || (*head)->next == NULL)
+		return (*head);
+	previous_ptr = *head;
+	cly_ptr = (*head)->next;
 
-	next_ptr = *head;
-	previous_ptr = NULL;
-	if (index == 0)
+	while (cly_ptr != NULL)
 	{
-		*head = (*head)->next;
-		free(next_ptr);
-		return (1);
+		(*head)->next = cly_ptr->next;
+		cly_ptr->next = previous_ptr;
+		previous_ptr = cly_ptr;
+		cly_ptr = (*head)->next;
 	}
-	for (i = 0; i < index; i += 1)
-	{
-		if (next_ptr == NULL)
-			return (-1);
-		previous_ptr = next_ptr;
-		next_ptr = next_ptr->next;
-	}
-	if (previous_ptr)
-		previous_ptr->next = next_ptr->next;
-	free(next_ptr);
+	*head = previous_ptr;
 
-	return (1);
+	return (*head);
 }
