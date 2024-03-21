@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * print_distinct - print doubly linked list
  * @h: adress of head node
