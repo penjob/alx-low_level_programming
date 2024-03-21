@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * dlistint_t - add node in the beginning
+ * add_dnodeint - add node in the beginning
  * @head: adress the pointer of current head node
  * @n: int field of new node
  * Return: the address of the new element, or NULL if it failed
@@ -13,7 +13,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (new ? free(new), NULL : NULL);
 	new->n = n;
 	new->prev = NULL;
-	if(!*head)
+	if (!*head)
 	{
 		*head = new;
 		new->prev = NULL;
