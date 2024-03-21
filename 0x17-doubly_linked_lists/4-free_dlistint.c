@@ -7,9 +7,9 @@
   */
 void free_dlistint(dlistint_t *head)
 {
-	dlinstint_t *node;
+	dlistint_t *node;
 
-	while (hesd)
+	while (head)
 	{
 		node = head;
 		head = head->next;
